@@ -18,11 +18,15 @@ class new_install(install):
         print( self.root )
         install.run(self) # invoke original install
 
-        root = self.root or '/'
-        self.mkpath(os.path.join(root, 'usr/share/themer'))
-        self.mkpath(os.path.join(root, 'usr/share/fish/completions'))
-        self.copy_tree('data/default', os.path.join(root, 'usr/share/themer/default'))
-        self.copy_file('data/fish/themer.fish', os.path.join(root, 'usr/share/fish/completions/'))
+        # `sudo python ... install` not necesarily safe (don't want in system location) ?
+        # Also, Mac OS has SIP as of El Capitan, which some may not have disabled
+
+        #root = self.root or '/'
+        root = os.path.expanduser('~')
+        self.mkpath(os.path.join(root, '.config/themer/'))
+        #self.mkpath(os.path.join(root, 'usr/share/fish/completions'))
+        self.copy_tree('data/default', os.path.join(root, '.config/themer/'))
+        #self.copy_file('data/fish/themer.fish', os.path.join(root, 'usr/share/fish/completions/'))
 
 setup(
     name='Themer',
