@@ -22,11 +22,11 @@ class new_install(install):
         # Also, Mac OS has SIP as of El Capitan, which some may not have disabled
 
         #root = self.root or '/'
-        root = os.path.expanduser('~')
+        root = os.getenv('HOME')
         self.mkpath(os.path.join(root, '.config/themer/'))
-        #self.mkpath(os.path.join(root, 'usr/share/fish/completions'))
+        #self.mkpath(os.path.join(root, '.config/fish/completions'))
         self.copy_tree('data/default', os.path.join(root, '.config/themer/'))
-        #self.copy_file('data/fish/themer.fish', os.path.join(root, 'usr/share/fish/completions/'))
+        #self.copy_file('data/fish/themer.fish', os.path.join(root, '.config/fish/completions/'))
 
 setup(
     name='Themer',
