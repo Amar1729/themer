@@ -1,6 +1,8 @@
 Themer
 ======
 
+This fork was only made for me to personally work on expanding Themer to Mac OS safely - it doesn't really represent much original work being done on the project itself. The original project and s-ol are still in active development.
+
 *Themer is a colorscheme generator and manager for your desktop.*
 
 
