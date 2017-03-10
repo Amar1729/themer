@@ -215,13 +215,13 @@
 		<key>Alpha Component</key>
 		<real>1</real>
 		<key>Blue Component</key>
-		<real>{% if background %}{{ background }}{% else %}{{ black | blue | float }}{% endif %}</real>
+		<real>{% if background %}{{ background | blue | float}}{% else %}{{ black | blue | float }}{% endif %}</real>
 		<key>Color Space</key>
 		<string>Calibrated</string>
 		<key>Green Component</key>
-		<real>{% if background %}{{ background }}{% else %}{{ black | green | float }}{% endif %}</real>
+		<real>{% if background %}{{ background | green | float}}{% else %}{{ black | green | float }}{% endif %}</real>
 		<key>Red Component</key>
-		<real>{% if background %}{{ background }}{% else %}{{ black | red | float }}{% endif %}</real>
+		<real>{% if background %}{{ background | red | float}}{% else %}{{ black | red | float }}{% endif %}</real>
 	</dict>
 	<key>Badge Color</key>
 	<dict>
@@ -293,13 +293,13 @@
 		<key>Alpha Component</key>
 		<real>1</real>
 		<key>Blue Component</key>
-		<real>{% if foreground %}{{ foreground }}{% else %}{{ white | blue | float }}{% endif %}</real>
+		<real>{% if foreground %}{{ foreground | blue | float}}{% else %}{{ white | blue | float }}{% endif %}</real>
 		<key>Color Space</key>
 		<string>Calibrated</string>
 		<key>Green Component</key>
-		<real>{% if foreground %}{{ foreground }}{% else %}{{ white | green | float }}{% endif %}</real>
+		<real>{% if foreground %}{{ foreground | green | float}}{% else %}{{ white | green | float }}{% endif %}</real>
 		<key>Red Component</key>
-		<real>{% if foreground %}{{ foreground }}{% else %}{{ white | red | float }}{% endif %}</real>
+		<real>{% if foreground %}{{ foreground | red | float}}{% else %}{{ white | red | float }}{% endif %}</real>
 	</dict>
 	<key>Link Color</key>
 	<dict>
